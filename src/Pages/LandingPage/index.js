@@ -6,6 +6,7 @@ import { Button, CssBaseline, Grid, List, ListItem, Paper, TextField, Typography
 
 import * as website from '../../website.json'
 import { LockTwoTone } from '@material-ui/icons';
+import { useHistory } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     // display: 'flex',
@@ -44,6 +45,8 @@ export default function LandingPage() {
     const content =  website.default;
     console.log(content);
     const classes = useStyles(); 
+    const history = useHistory();
+
     const [websiteName, setWebsiteName] = useState();
     const [interviewLink, setInterviewLink] = useState();
     const handleSetWebsite = () => {
@@ -57,7 +60,7 @@ export default function LandingPage() {
 
 
     const handlePreview = () => {
-        window.location.replace('/website')
+        history.push('/website')
     }
     return (
         <div className={classes.root}>
