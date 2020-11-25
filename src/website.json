@@ -1,0 +1,12 @@
+{
+    "websiteName": "Website Name",
+    "websitePages": [
+        {
+            "pageContent": "Hello World 1"
+        },
+        {
+            "pageContent": "Hello World 1"
+        }
+    ],
+    "interviewLink": "http://www.example.com/interview"
+}
