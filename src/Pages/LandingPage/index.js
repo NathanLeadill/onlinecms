@@ -54,6 +54,11 @@ export default function LandingPage() {
 
         localStorage.setItem('website', JSON.stringify(test))
     }
+
+
+    const handlePreview = () => {
+        window.location.replace('/website')
+    }
     return (
         <div className={classes.root}>
             <main className={classes.content}>
@@ -90,8 +95,11 @@ export default function LandingPage() {
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid item xs={6}>
                             <Button onClick={handleSetWebsite}>Save</Button>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Button onClick={handlePreview}>Preview</Button>
                         </Grid>
                     </Grid>
                 </Paper>
